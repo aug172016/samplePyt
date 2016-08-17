@@ -23,4 +23,5 @@ build:
   ci:
     - echo $IS_PULL_REQUEST
     - python --version
-    - echo $A and $C and $key1
+    - echo $A and $C and $key1 - if SHIPPABLE_PYTHON_VERSION="2.6" then fi
+    - if [ "SHIPPABLE_PYTHON_VERSION"=="3.3"  ]; then foobar; fi 
